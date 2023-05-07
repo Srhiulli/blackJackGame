@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url("images/_Table_BlackJackGame.jpg");
+    background-size: cover;
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 150%;
+    letter-spacing: 1px;
+}
+
+h1 {
+    color: goldenrod;
+    font-weight: 1000;
+    letter-spacing: 10px;
+    font-size: 80px;
+
+}
+
+#message-el {
+    font-style: italic;
+}
+
+.button-El-style {
+    width: 30%;
+    height: 8%;
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+
+    color: #016f32;
+    font-size: 80%;
+    font-weight: 600;
+    background: goldenrod;
+
+}
+ .button-El-style:hover{
+    width: 31%;
+    height: 8%;
+    font-size: 84%;
+    border: 5px solid rgba(64, 170, 206, 0.5);
+
+
+ }

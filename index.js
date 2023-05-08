@@ -11,37 +11,36 @@ let sum = firstcard + secondCard
 let cardsEl = document.querySelector("#cards-el")
 let sumEl = document.querySelector("#sum-el")
 
-
-function startGame() {
-
-  cardsEl.textContent = "Cards: " + firstcard + " and " + secondCard
-  sumEl.textContent = "Sum: " + sum
-
-  let message = ""
+function sendMessage(message){
   let massageEl = document.querySelector("#message-el")
-  massageEl.textContent = "Good Luck!"
-
-  if (sum <= 20) {
-    message = "Do you want to draw a new card?"
-    let ButtonMessage = document.querySelector("#button-start-game-one-more-card")
-    ButtonMessage.insertAdjacentHTML("afterend", '<button class="button-El-style" id="button-start-game-one-more-card" onclick="addOneMoreCardButton()">Get one more card</button>');
-    console.log("New button ok")
-
-  } else if (sum === 21) {
-    message = "Whohooooo! You've got Blackjack!"
-    hasBlackJack = true
-
-  }
-  else {
-    message = "You're out of the game!"
-
-    isAlive = false
-  }
-
-  massageEl.texteContent = message
+  massageEl.textContent = message
+  console.log(massageEl)
 }
 
-function addOneMoreCardButton() {
+function startGame() {
+  cardsEl.textContent = "Cards: " + firstcard + " and " + secondCard
+  sumEl.textContent = "Sum: " + sum
+  sendMessage("Good luck!")
+
+  if (sum <= 20) {
+    sendMessage("Do you want to draw a new card?")    
+  } 
+  else if (sum === 21) {
+    sendMessage("Whohooooo! You've got Blackjack!")
+    hasBlackJack = true
+    
+  }
+  else {
+    sendMessage("You're out of the game!")
+    isAlive = false
+  }
+}
+
+function newCard() {
+  console.log(3213132121)
+
+  sendMessage("Good luck!")
+
   let thirdCard = 10
   sum += thirdCard
   cardsEl.textContent = "Cards: " + firstcard + " and " + secondCard + " and " + thirdCard
